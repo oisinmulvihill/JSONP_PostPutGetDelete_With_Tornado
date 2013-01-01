@@ -1,0 +1,4 @@
+nose
+requests
+evasion-common==1.0.2
+tornado==2.4

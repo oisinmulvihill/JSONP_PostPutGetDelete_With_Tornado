@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" xml:lang="en" lang="en"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>Backbone Boilerplate</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Demo JSONP with GET/POST/PUT/DELETE" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <script src="js/json2.js"></script>
+  <script src="js/jquery-min.js"></script>
+  <script src="js/jquery-jsonpcrud.js"></script>
+</head>
+<body>
+  <!-- Initially populated by templates/layout.html -->
+  <div class="container container_16">
+    <div class="row"><h5 class="span15">JSONP REST API Test</h5></div>
+
+    <div class="row">
+      <p/>
+      <p class="span16">
+        Start the restservice which, by default, runs on port 18123. Once its
+        running you can then perform JSONP requests by pressing the buttons
+        below.
+      </p>
+    </div>
+    <div class="row">
+      <div class="span5">
+        <h6>Server URI</h6>
+        <input class="span4" type="text" id="base_uri" name="base_uri" value="http://localhost:18123" title="No trailing slashes in the URL please."/>
+      </div>
+      <div class="span5">
+        <h6 class="">DATA</h6>
+        <input class="span6" type="text" id="json_data" name="json_data" value='{"a":1}' title="Valid JSON data to send."/>
+      </div>
+    </div>
+
+    <div class="row">
+      <div id="ping-server" class="span2 btn" title="test the connection to the server.">PING</div>
+      <div id="jsonp-get" class="span2 btn">GET</div>
+      <div id="jsonp-post" class="span2 btn">POST</div>
+      <div id="jsonp-put" class="span2 btn">PUT</div>
+      <div id="jsonp-delete" class="span2 btn">DELETE</div>
+    </div>
+
+    <div class="row">
+      <div class="span13" id="message-box"></div>
+    </div>
+
+  </div>
+
+  <script type="text/javascript">
+  $(document).ready(function () {
+      // Set up the handlers which will call the remote server of JSONP
+      $.jsonpcrud.init()
+      $.jsonpcrud.debug_logger("jsonpcrud: called init ok.");
+  });
+  </script>
+</body>
+</html>

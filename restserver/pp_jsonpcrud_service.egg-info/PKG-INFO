@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: pp-jsonpcrud-service
+Version: 1.0.0
+Summary: Tornado REST Application for pp-jsonpcrud-service
+Home-page: UNKNOWN
+Author: UNKNOWN
+Author-email: oisin dot mulvihill at gmail dot com
+License: UNKNOWN
+Description: Tornado REST Application for pp-jsonpcrud-service
+Keywords: web wsgi bfg pylons pyramid
+Platform: UNKNOWN
+Classifier: Programming Language :: Python
+Classifier: Framework :: Tornado
+Classifier: Topic :: Internet :: WWW/HTTP

@@ -1,0 +1,11 @@
+tmp
+build
+dist
+.DS_Store*
+*.vagrant
+*.log
+*~
+pp-jsonpcrud-service/*.egg-info*
+*.pyc
+*.db
+puppet/manifests/distribute-*gz
